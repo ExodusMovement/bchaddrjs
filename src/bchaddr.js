@@ -181,7 +181,7 @@ function decodeAddress (address) {
  * the version byte plus 20 bytes for a RIPEMD-160 hash.
  * @private
  */
-var BASE_58_CHECK_PAYLOAD_LENGTH = 21
+var BASE_58_CHECK_PAYLOAD_LENGTHS = [21, 25, 29, 33, 41, 49, 57, 65]
 
 /**
  * Attempts to decode the given address assuming it is a base58 address.
@@ -193,7 +193,7 @@ var BASE_58_CHECK_PAYLOAD_LENGTH = 21
 function decodeBase58Address (address) {
   try {
     var payload = bs58check.decode(address)
-    if (payload.length !== BASE_58_CHECK_PAYLOAD_LENGTH) {
+    if (BASE_58_CHECK_PAYLOAD_LENGTHS.indexOf(payload.length) === -1) {
       throw new InvalidAddressError()
     }
     var versionByte = payload[0]
