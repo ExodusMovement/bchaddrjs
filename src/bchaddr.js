@@ -177,8 +177,11 @@ function decodeAddress (address) {
 }
 
 /**
- * Length of a valid base58check encoding payload: 1 byte for
- * the version byte plus 20 bytes for a RIPEMD-160 hash.
+ * Lengths of a valid base58check encoding payload: 1 byte for
+ * the version byte plus the number of bytes for a RIPEMD-160 hash.
+ *
+ * Source: https://github.com/bitcoincashorg/bitcoincash.org/blob/master/spec/cashaddr.md
+ *
  * @private
  */
 var BASE_58_CHECK_PAYLOAD_LENGTHS = [21, 25, 29, 33, 41, 49, 57, 65]
