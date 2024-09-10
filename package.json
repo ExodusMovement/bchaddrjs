@@ -1,5 +1,5 @@
 {
-  "name": "bchaddrjs",
+  "name": "@exodus/bchaddrjs",
   "version": "0.5.2",
   "description": "Bitcoin Cash general purpose address translation.",
   "main": "src/bchaddr.js",
@@ -20,6 +20,10 @@
     "type": "git",
     "url": "git+ssh://git@github.com/ealmansi/bchaddrjs.git"
   },
+  "files": [
+    "src",
+    "README.md"
+  ],
   "keywords": [
     "bitcoin-cash",
     "bitcoin",
