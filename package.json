@@ -58,10 +58,10 @@
     "nyc": "^13.3.0",
     "shelljs": "^0.8.2",
     "standard": "^10.0.3",
-    "uglify-js": "^3.4.7"
+    "uglify-js": "^3.19.0"
   },
   "dependencies": {
-    "bs58check": "^2.1.2",
+    "bs58check": "^3.0.0",
     "cashaddrjs": "^0.3.3"
   }
 }
